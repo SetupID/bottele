@@ -37,8 +37,8 @@ def golek(m,film,cid):
 		for i in result['download_link']:
 			for k,v in i.items():
                         #print(abang(f"[{k}] : "+ijo(v)))
-				msg = f"Link film\n[{k}] : "+v
-		bot.send_message(cid,msg)
+				msg = f".::Download Link::.\n[{k}] : "+v
+				bot.send_message(cid,msg)
 	except AttributeError:
 		bot.reply_to(m,"oh sorry bos,i'cant find what u search :(")
 		return True
