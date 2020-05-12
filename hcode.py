@@ -4,7 +4,7 @@
 import requests,telebot,time
 from telebot import types
 from bs4 import BeautifulSoup as bs
-token = '1053039970:AAFNxbziqoErgP0mLVleaOeY_vN_jB5y3c0'
+token = '<token-ur-boot>'
 bot = telebot.TeleBot(token)
 def golek(m,film,cid):
 	result = {}
@@ -48,8 +48,8 @@ def command_score(m):
     golek(m,m.text,cid)
 
 @bot.message_handler(commands=['start'])
-def command_bisi(m): # Definimos una función que resuelva lo >
-    cid = m.chat.id # Guardamos el ID de la conversación para>
+def command_bisi(m):
+    cid = m.chat.id 
     msg = "hi, thanks for starting me ! >//<\n"
     bot.send_message(cid, msg)
 @bot.message_handler(commands=['help'])
@@ -60,4 +60,4 @@ def on_user_join(m):
 	bot.send_message(m.chat.id, f"Hi [{m.new_chat_member.username}](tg://user?id={m.new_chat_member.id}) nice to meet u >//<",parse_mode="Markdown")
 bot.polling(none_stop=True)
 while True:
-    time.sleep(300) # Hacemos que duerma durante un peri
+    time.sleep(300) 
